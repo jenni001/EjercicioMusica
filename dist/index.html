@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="/index.5f5ecead.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<style>
+
+
+
+</style>
+
+<body class="sidebar-main">
+<div id="header">
+    <div id="logo"> <img src="/micro.c2ac7042.jpg" width="100px" height="90px"> </div>
+    <div id="main-title"><h1> Radio patio </h1></div>
+<div id="reproductores">
+  <button><span class="material-icons" onclick="play()"> play_arrow </span></button>
+  <button><span class="material-icons" onclick="left()"> skip_previous </span></button>
+  <button><span class="material-icons" onclick="pause()"> pause </span></button>
+  <button><span class="material-icons" onclick="next()"> skip_next </span></button>
+  <button><span class="material-icons" onclick="volumenUp()"> volume_up </span></button>
+  <button><span class="material-icons" onclick="volumenDown()"> volume_down </span></button>
+</div>
+</div>
+    <script>var musica = new Audio();
+var canciones = [
+    "../audios/AC-DC.mp3",
+    "../audios/Aretha.mp3",
+    "../audios/Bob Marley.mp3",
+    "../audios/Red Hot Chili Peppers.mp3"
+];
+var i = 0;
+function play() {
+    musica.pause();
+    musica = new Audio(canciones[0]);
+    musica.play();
+}
+function left() {
+    musica.pause();
+    if (i > 0) i--;
+    else i = canciones.length - 1;
+    musica = new Audio(canciones[i]);
+    musica.play();
+}
+function pause() {
+    musica.pause();
+}
+function next() {
+    musica.pause();
+    if (i == canciones.length - 1) i = 0;
+    else i++;
+    musica = new Audio(canciones[i]);
+    musica.play();
+}
+function volumenUp() {
+    if (musica.volume < 1) musica.volume += 0.1;
+    console.log(musica.volume);
+}
+function volumenDown() {
+    console.log(musica.volume);
+    if (musica.volume > 0.1) musica.volume -= 0.1;
+    console.log(musica.volume);
+}
+
+</script>
+<div id="body">
+    <div id="main"><img src="/micro.c2ac7042.jpg" width="400px" height="400px"> </div>
+    <div id="sidebar">
+        <div><a href="#" class="menus">Inicio</a></div>
+        <div><a href="#" class="menus">¿Dónde Estamos?</a></div>
+        <div><a href="#" class="menus">Nuestros programas</a></div>
+        <div><a href="#" class="menus">Programación</a></div>
+
+    </div>
+
+</div>
+<div id="footer">Pie de página</div>
+</body>
+</html>

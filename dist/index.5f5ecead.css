@@ -1,0 +1,101 @@
+@charset "UTF-8";
+div#body {
+  margin: auto;
+  width: 710px;
+  clear: left;
+}
+div#header {
+  margin: auto auto auto auto;
+  width: 710px;
+  border: solid 3px #815608;
+  border-radius: 15px;
+}
+div#sidebar {
+  display: none;
+  /*este div no lo hace visible */
+  border: solid 1px #CFC;
+  padding-left: 15px;
+}
+/*Se modifica el ancho*/
+body.sidebar-main div#footer {
+  margin: 25px auto 25px auto;
+  width: 710px;
+  border: solid 3px #815608;
+  border-radius: 15px;
+  clear: right;
+  /* Ya que el div encima es tipo float:right, es necesario decirle ahora que coloque este div cuando no hay ning�n div que este flotando a la derecha */
+}
+body.main-sidebar div#footer {
+  margin: 15px auto 15px auto;
+  width: 710px;
+  border: solid 3px #815608;
+  border-radius: 15px;
+  clear: left;
+  /* Ya que el div encima es tipo float:left, es necesario decirle ahora que coloque este div cuando no hay ning�n div que este flotando a la izquierda*/
+}
+body.main-sidebar div#main, body.sidebar-main div#main {
+  width: 490px;
+  border: solid 4px green;
+}
+body.main-sidebar div#body, body.sidebar-main div#body {
+  margin: auto auto auto auto;
+  width: 710px;
+  border: solid 4px #FFF;
+}
+body.main-sidebar div#sidebar, body.sidebar-main div#sidebar {
+  padding-top: 10px;
+  display: block;
+  width: 200px;
+  border: solid 1px #CCC;
+}
+body {
+  float: left;
+  border: dotted 1px green;
+}
+body.sidebar-main div#main, body.sidebar-main div#sidebar {
+  float: right;
+  border: dotted 1px green;
+}
+div#header div#logo {
+  margin-bottom: inherit;
+  border: dotted 1px green;
+  float: left;
+}
+div#header div#main-title {
+  width: 600px;
+  margin-bottom: inherit;
+  border: dotted 1px blue;
+  padding-bottom: 10px;
+}
+/* DEFINE LOS ENLACES DE MEnU*/
+a.menus:link {
+  text-decoration: none;
+  color: #000000;
+  background-color: #815608;
+  border: #FFFFFF 1px solid;
+}
+a.menus:visited {
+  text-decoration: none;
+  color: #cccccc;
+}
+a.menus:active {
+  text-decoration: none;
+  color: #003399;
+  background: green;
+  border: #FFFFFF 1px solid;
+}
+a.menus:hover {
+  text-decoration: underline;
+  color: #003399;
+  background: red;
+  border: #FFFFFF 1px solid;
+}
+#reproductores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+/*# sourceMappingURL=index.5f5ecead.css.map */
